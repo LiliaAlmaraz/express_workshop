@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const express = require('express');
 const app = express();
 const pokemon = require('./routes/pokemon');
+//const pokemon = require('./routes/pokemon');
 
 app.use(morgan('dev'));
 app.use(express.json());
@@ -21,3 +22,4 @@ app.use((req, res, next) => {
 app.listen(process.env.PORT || 3000, () => {
     console.log("server is running...");;
 });
+
